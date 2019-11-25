@@ -1,9 +1,5 @@
 spring:
   application:
     name: service-config
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: SERVICE-CONFIG
-      profile: dev
+server:
+  port: 8974
