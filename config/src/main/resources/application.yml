@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: serive-config
+server:
+  port: 8974
