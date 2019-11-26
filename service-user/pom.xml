@@ -5,7 +5,7 @@
     <groupId>com.wangsp.cloud</groupId>
     <artifactId>service-user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>service-summer</name>
+    <name>service-user</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
