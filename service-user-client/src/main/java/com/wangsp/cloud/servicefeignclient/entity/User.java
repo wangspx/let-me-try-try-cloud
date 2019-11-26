@@ -1,4 +1,4 @@
-package com.wangsp.cloud.servicesummer.entity;
+package com.wangsp.cloud.servicefeignclient.entity;
 
 import lombok.Data;
 

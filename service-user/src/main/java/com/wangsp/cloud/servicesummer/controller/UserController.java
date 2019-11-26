@@ -1,7 +1,7 @@
 package com.wangsp.cloud.servicesummer.controller;
 
-import com.wangsp.cloud.servicesummer.entity.User;
-import com.wangsp.cloud.servicesummer.feign.UserClient;
+import com.wangsp.cloud.servicefeignclient.entity.User;
+import com.wangsp.cloud.servicefeignclient.client.UserClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/users")
-public class UserController {
+public class UserController implements Version1Controller{
     @Autowired
     private UserClient userClient;
 
