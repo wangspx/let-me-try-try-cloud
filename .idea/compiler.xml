@@ -8,10 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="zuul" />
         <module name="eureka" />
+        <module name="service-user" />
         <module name="cloud" />
         <module name="service-db" />
         <module name="config" />
-        <module name="service-summer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,7 +27,7 @@
       <module name="service-db" options="" />
       <module name="service-feign-interface" options="" />
       <module name="service-order" options="" />
-      <module name="service-summer" options="" />
+      <module name="service-user" options="" />
       <module name="zuul" options="" />
     </option>
   </component>
