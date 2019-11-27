@@ -1,7 +1,7 @@
 package com.wangsp.cloud.servicesummer.controller;
 
-import com.wangsp.cloud.servicefeignclient.entity.User;
-import com.wangsp.cloud.servicefeignclient.client.UserClient;
+import com.wangsp.cloud.servicedbclient.entity.User;
+import com.wangsp.cloud.servicedbclient.client.UserClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

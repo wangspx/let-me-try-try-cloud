@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="service-user" />
         <module name="service-user-client" />
+        <module name="service-db-client" />
         <module name="eureka" />
         <module name="cloud" />
         <module name="service-db" />
@@ -27,6 +28,7 @@
       <module name="dependencies" options="-parameters" />
       <module name="eureka" options="" />
       <module name="service-db" options="" />
+      <module name="service-db-client" options="" />
       <module name="service-feign-interface" options="" />
       <module name="service-order" options="" />
       <module name="service-user" options="" />

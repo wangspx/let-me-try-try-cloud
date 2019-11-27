@@ -1,4 +1,4 @@
-package com.wangsp.cloud.servicefeignclient.entity;
+package com.wangsp.cloud.servicedbclient.entity;
 
 import lombok.Data;
 

@@ -15,7 +15,12 @@
     <dependencies>
         <dependency>
             <groupId>com.wangsp.cloud</groupId>
-            <artifactId>service-feign-client</artifactId>
+            <artifactId>service-user-client</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wangsp.cloud</groupId>
+            <artifactId>service-db-client</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
