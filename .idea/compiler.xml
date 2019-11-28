@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="service-user" />
         <module name="service-user-client" />
+        <module name="service-common" />
         <module name="service-db-client" />
         <module name="eureka" />
         <module name="cloud" />
@@ -20,6 +21,7 @@
     <bytecodeTargetLevel>
       <module name="service-feign-interface" target="1.8" />
       <module name="service-order" target="1.8" />
+      <module name="sleuth" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -27,12 +29,15 @@
       <module name="config" options="" />
       <module name="dependencies" options="-parameters" />
       <module name="eureka" options="" />
-      <module name="service-db" options="" />
+      <module name="service-common" options="" />
+      <module name="service-db" options="-parameters" />
       <module name="service-db-client" options="" />
+      <module name="service-dependencies-parent" options="-parameters" />
       <module name="service-feign-interface" options="" />
       <module name="service-order" options="" />
-      <module name="service-user" options="" />
+      <module name="service-user" options="-parameters" />
       <module name="service-user-client" options="" />
+      <module name="sleuth" options="-parameters" />
       <module name="zuul" options="" />
     </option>
   </component>
