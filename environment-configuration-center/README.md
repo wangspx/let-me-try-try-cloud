@@ -29,7 +29,7 @@ spring cloud版本：`Greenwich.SR4`
 ~~~yml
 spring:
   application:
-    name: service-config  
+    name: ENVIRONMENT-CONFIGURATION-CENTER  
   cloud:
     config:
       server:

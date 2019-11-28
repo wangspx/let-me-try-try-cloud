@@ -1,11 +1,11 @@
 spring:
   application:
-    name: service-zuul
+    name: service-gateway
   cloud:
     config:
       discovery:
         enabled: true
-        service-id: SERVICE-CONFIG
+        service-id: ENVIRONMENT-CONFIGURATION-CENTER
       profile: dev
 eureka:
   client:
