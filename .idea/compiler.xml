@@ -9,9 +9,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="service-user" />
         <module name="service-user-client" />
-        <module name="service-common" />
         <module name="service-db-client" />
         <module name="eureka" />
+        <module name="service-commons" />
         <module name="cloud" />
         <module name="service-db" />
         <module name="config" />
@@ -29,7 +29,7 @@
       <module name="config" options="" />
       <module name="dependencies" options="-parameters" />
       <module name="eureka" options="" />
-      <module name="service-common" options="" />
+      <module name="service-commons" options="-parameters" />
       <module name="service-db" options="-parameters" />
       <module name="service-db-client" options="" />
       <module name="service-dependencies-parent" options="-parameters" />
@@ -38,7 +38,7 @@
       <module name="service-user" options="-parameters" />
       <module name="service-user-client" options="" />
       <module name="sleuth" options="-parameters" />
-      <module name="zuul" options="" />
+      <module name="zuul" options="-parameters" />
     </option>
   </component>
 </project>

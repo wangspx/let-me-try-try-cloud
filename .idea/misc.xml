@@ -17,6 +17,7 @@
         <option value="$PROJECT_DIR$/service-db-client/pom.xml" />
         <option value="$PROJECT_DIR$/service-common/pom.xml" />
         <option value="$PROJECT_DIR$/service-dependencies-parent/pom.xml" />
+        <option value="$PROJECT_DIR$/service-commons/pom.xml" />
       </list>
     </option>
   </component>
