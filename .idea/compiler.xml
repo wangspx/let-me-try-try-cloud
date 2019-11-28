@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="service-user" />
+        <module name="service-db-client" />
+        <module name="environment-registration-center" />
+        <module name="service-user-client" />
+        <module name="service-db" />
+        <module name="environment-zipkin" />
+        <module name="service-commons" />
+        <module name="service-gateway" />
+        <module name="environment-configuration-center" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="environment-configuration-center" target="1.8" />
+      <module name="environment-registration-center" target="1.8" />
+      <module name="environment-zipkin" target="1.8" />
+      <module name="service-commons" target="1.8" />
+      <module name="service-db" target="1.8" />
+      <module name="service-db-client" target="1.8" />
+      <module name="service-gateway" target="1.8" />
+      <module name="service-user" target="1.8" />
+      <module name="service-user-client" target="1.8" />
+      <module name="starter-base-service" target="1.8" />
+      <module name="starter-dependencies-parent" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="environment-configuration-center" options="-parameters" />
+      <module name="environment-registration-center" options="-parameters" />
+      <module name="environment-zipkin" options="-parameters" />
+      <module name="service-commons" options="-parameters" />
+      <module name="service-db" options="-parameters" />
+      <module name="service-db-client" options="-parameters" />
+      <module name="service-gateway" options="-parameters" />
+      <module name="service-user" options="-parameters" />
+      <module name="service-user-client" options="-parameters" />
+      <module name="starter-dependencies-parent" options="-parameters" />
+    </option>
+  </component>
+</project>
