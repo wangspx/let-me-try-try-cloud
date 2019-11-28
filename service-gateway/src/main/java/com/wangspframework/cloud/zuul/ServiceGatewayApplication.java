@@ -1,17 +1,17 @@
-package com.wangspframework.cloud.config;
+package com.wangspframework.cloud.zuul;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
+@EnableZuulProxy
 @EnableEurekaClient
-@EnableConfigServer
 @SpringBootApplication
-public class ConfigApplication {
+public class ServiceGatewayApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConfigApplication.class, args);
+        SpringApplication.run(ServiceGatewayApplication.class, args);
     }
 
 }

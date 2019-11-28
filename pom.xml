@@ -22,7 +22,7 @@
         <module>service-gateway</module>
         <module>service-user</module>
         <module>service-user-client</module>
-        <module>starter-base</module>
+        <module>starter-base-service</module>
     </modules>
 
     <properties>
