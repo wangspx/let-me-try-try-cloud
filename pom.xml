@@ -2,11 +2,52 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.0.RELEASE</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.wangspframework.cloud</groupId>
+    <artifactId>starter-dependencies-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
 
-    <groupId>com.wangsp</groupId>
-    <artifactId>cloud</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>environment-configuration-center</module>
+        <module>environment-registration-center</module>
+        <module>environment-zipkin</module>
+        <module>service-commons</module>
+        <module>service-db</module>
+        <module>service-db-client</module>
+        <module>service-gateway</module>
+        <module>service-user</module>
+        <module>service-user-client</module>
+        <module>starter-base</module>
+    </modules>
 
+    <properties>
+        <java.version>1.8</java.version>
+        <spring-cloud.version>Greenwich.SR4</spring-cloud.version>
+    </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
