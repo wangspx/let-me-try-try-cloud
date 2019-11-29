@@ -1,5 +1,0 @@
-spring:
-  application:
-    name: environment-zipkin
-server:
-  port: 9411

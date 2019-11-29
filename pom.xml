@@ -16,7 +16,6 @@
     <modules>
         <module>environment-configuration-center</module>
         <module>environment-registration-center</module>
-        <module>environment-zipkin</module>
         <module>service-commons</module>
         <module>service-db</module>
         <module>service-db-client</module>

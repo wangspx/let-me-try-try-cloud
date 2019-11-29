@@ -4,10 +4,7 @@ import com.wangspframework.cloud.servicedbclient.entity.User;
 import com.wangspframework.cloud.servicedbclient.client.UserClient;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author spwang Created on 2019/11/25 at 21:49
@@ -29,14 +26,8 @@ public class UserController implements Version1Controller{
         return userClient.getUserById(id);
     }
 
-    @GetMapping()
-    public User add() {
-        User user = new User();
-        user.setUsername("xiaowang" + (int)(Math.random() * 100));
-        user.setPassword("123456");
-        user.setPhone("12345678901");
-        user.setEmail("admin@123");
-        log.info("add {} user" , user.getUsername());
+    @PostMapping()
+    public User add(@RequestBody User user) {
         return userClient.addUser(user);
     }
 }
