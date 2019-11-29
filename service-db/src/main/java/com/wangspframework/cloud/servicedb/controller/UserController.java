@@ -9,6 +9,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.persistence.EntityNotFoundException;
+
 /**
  * @author spwang Created on 2019/11/25 at 22:37
  * @version 1.0.0
@@ -25,10 +27,10 @@ public class UserController implements UserClient {
         com.wangspframework.cloud.servicedb.entity.User user = null;
         try {
             user = userRepository.getOne(id);
-        } catch (RuntimeException e) {
+            return Result.success(convert((user)));
+        } catch (Exception e) {
             throw new ServiceException("02-0001", "数据库查询失败", e);
         }
-        return Result.success(convert((user)));
     }
 
     @Override
