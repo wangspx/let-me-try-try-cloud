@@ -1,5 +1,6 @@
 package com.wangspframework.cloud.servicesummer.controller;
 
+import com.wangspframework.cloud.servicebaseframe.exception.ServiceException;
 import com.wangspframework.cloud.servicebaseframe.response.Result;
 import com.wangspframework.cloud.servicedbclient.entity.User;
 import com.wangspframework.cloud.servicedbclient.client.UserClient;
@@ -19,7 +20,7 @@ public class UserController implements Version1Controller{
     private UserClient userClient;
 
     @GetMapping("{id}")
-    public Result getUser(@PathVariable Integer id) {
+    public Result getUser(@PathVariable Integer id) throws ServiceException {
         log.info("find the user for id = {}" , id);
         new Thread(()->{
             log.info("I am a other thread, userId = " + id);

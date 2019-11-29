@@ -1,5 +1,6 @@
 package com.wangspframework.cloud.servicedbclient.client;
 
+import com.wangspframework.cloud.servicebaseframe.exception.ServiceException;
 import com.wangspframework.cloud.servicebaseframe.response.Result;
 import com.wangspframework.cloud.servicedbclient.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient("SERVICE-DB")
 public interface UserClient {
     @GetMapping("/users/{id}")
-    Result<User> getUserById(@PathVariable("id") Integer id);
+    Result<User> getUserById(@PathVariable("id") Integer id) throws ServiceException;
 
     @PostMapping("/users/")
     Result<User> addUser(@RequestBody User user);

@@ -1,5 +1,6 @@
 package com.wangspframework.cloud.servicedb.controller;
 
+import com.wangspframework.cloud.servicebaseframe.exception.ServiceException;
 import com.wangspframework.cloud.servicebaseframe.response.Result;
 import com.wangspframework.cloud.servicedb.repository.UserRepository;
 import com.wangspframework.cloud.servicedbclient.client.UserClient;
@@ -19,8 +20,14 @@ public class UserController implements UserClient {
     private UserRepository userRepository;
 
     @Override
-    public Result<com.wangspframework.cloud.servicedbclient.entity.User> getUserById(Integer id) {
-        com.wangspframework.cloud.servicedb.entity.User user = userRepository.getOne(id);
+    public Result<com.wangspframework.cloud.servicedbclient.entity.User> getUserById(Integer id) throws ServiceException {
+
+        com.wangspframework.cloud.servicedb.entity.User user = null;
+        try {
+            user = userRepository.getOne(id);
+        } catch (RuntimeException e) {
+            throw new ServiceException("02-0001", "数据库查询失败", e);
+        }
         return Result.success(convert((user)));
     }
 
