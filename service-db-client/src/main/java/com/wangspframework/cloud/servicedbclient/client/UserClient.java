@@ -1,5 +1,6 @@
 package com.wangspframework.cloud.servicedbclient.client;
 
+import com.wangspframework.cloud.servicecommon.response.Result;
 import com.wangspframework.cloud.servicedbclient.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 @FeignClient("SERVICE-DB")
 public interface UserClient {
     @GetMapping("/users/{id}")
-    User getUserById(@PathVariable("id") Integer id);
+    Result<User> getUserById(@PathVariable("id") Integer id);
 
     @PostMapping("/users/")
-    User addUser(@RequestBody User user);
+    Result<User> addUser(@RequestBody User user);
 }

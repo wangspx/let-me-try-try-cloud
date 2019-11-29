@@ -1,5 +1,6 @@
 package com.wangspframework.cloud.servicesummer.controller;
 
+import com.wangspframework.cloud.servicecommon.response.Result;
 import com.wangspframework.cloud.servicedbclient.entity.User;
 import com.wangspframework.cloud.servicedbclient.client.UserClient;
 import lombok.extern.slf4j.Slf4j;
@@ -18,16 +19,17 @@ public class UserController implements Version1Controller{
     private UserClient userClient;
 
     @GetMapping("{id}")
-    public User getUser(@PathVariable Integer id) {
+    public Result getUser(@PathVariable Integer id) {
         log.info("find the user for id = {}" , id);
         new Thread(()->{
             log.info("I am a other thread, userId = " + id);
         }).start();
-        return userClient.getUserById(id);
+        return  userClient.getUserById(id);
     }
 
     @PostMapping()
-    public User add(@RequestBody User user) {
-        return userClient.addUser(user);
+    public Result add(@RequestBody User user) {
+        Result<User> userResult = userClient.addUser(user);
+        return userResult;
     }
 }

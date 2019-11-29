@@ -20,7 +20,7 @@
     <dependencies>
         <dependency>
             <groupId>com.wangspframework.cloud</groupId>
-            <artifactId>service-commons</artifactId>
+            <artifactId>service-base-frame</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

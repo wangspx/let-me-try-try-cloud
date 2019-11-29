@@ -1,7 +1,9 @@
 package com.wangspframework.cloud.servicedb.controller;
 
+import com.wangspframework.cloud.servicecommon.response.Result;
 import com.wangspframework.cloud.servicedb.repository.UserRepository;
 import com.wangspframework.cloud.servicedbclient.client.UserClient;
+import com.wangspframework.cloud.servicedbclient.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,15 +19,15 @@ public class UserController implements UserClient {
     private UserRepository userRepository;
 
     @Override
-    public com.wangspframework.cloud.servicedbclient.entity.User getUserById(Integer id) {
+    public Result<com.wangspframework.cloud.servicedbclient.entity.User> getUserById(Integer id) {
         com.wangspframework.cloud.servicedb.entity.User user = userRepository.getOne(id);
-        return convert((user));
+        return Result.success(convert((user)));
     }
 
     @Override
-    public com.wangspframework.cloud.servicedbclient.entity.User addUser(com.wangspframework.cloud.servicedbclient.entity.User user) {
+    public Result<com.wangspframework.cloud.servicedbclient.entity.User> addUser(User user) {
         log.info("add user");
-        return convert(userRepository.save(convert((user))));
+        return Result.success(convert(userRepository.save(convert((user)))));
     }
 
     private com.wangspframework.cloud.servicedbclient.entity.User convert(com.wangspframework.cloud.servicedb.entity.User user) {
@@ -47,4 +49,6 @@ public class UserController implements UserClient {
         entity.setEmail(user.getEmail());
         return entity;
     }
+
+
 }

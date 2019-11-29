@@ -17,7 +17,7 @@ import java.util.Arrays;
 public class TraceLog {
     private static final Logger LOGGER = LoggerFactory.getLogger(TraceLog.class);
 
-    @Pointcut("execution(* com.wangsp.cloud..*.*(..))")
+    @Pointcut("execution(* com.wangspframework.cloud..*.*(..))")
     public void point(){
     }
 
