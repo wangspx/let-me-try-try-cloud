@@ -1,6 +1,6 @@
 package com.wangspframework.cloud.servicesummer.controller;
 
-import com.wangspframework.cloud.servicecommon.response.Result;
+import com.wangspframework.cloud.servicebaseframe.response.Result;
 import com.wangspframework.cloud.servicedbclient.entity.User;
 import com.wangspframework.cloud.servicedbclient.client.UserClient;
 import lombok.extern.slf4j.Slf4j;

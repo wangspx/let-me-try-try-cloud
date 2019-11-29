@@ -1,6 +1,6 @@
 package com.wangspframework.cloud.servicedbclient.client;
 
-import com.wangspframework.cloud.servicecommon.response.Result;
+import com.wangspframework.cloud.servicebaseframe.response.Result;
 import com.wangspframework.cloud.servicedbclient.entity.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,4 +1,4 @@
-package com.wangspframework.cloud.servicecommon;
+package com.wangspframework.cloud.servicebaseframe;
 
 class ServiceCommonApplicationTests {
 

@@ -1,6 +1,6 @@
 package com.wangspframework.cloud.servicedb.controller;
 
-import com.wangspframework.cloud.servicecommon.response.Result;
+import com.wangspframework.cloud.servicebaseframe.response.Result;
 import com.wangspframework.cloud.servicedb.repository.UserRepository;
 import com.wangspframework.cloud.servicedbclient.client.UserClient;
 import com.wangspframework.cloud.servicedbclient.entity.User;

@@ -1,4 +1,4 @@
-package com.wangspframework.cloud.servicecommon.aspect;
+package com.wangspframework.cloud.servicebaseframe.aspect;
 
 import org.springframework.context.annotation.Import;
 

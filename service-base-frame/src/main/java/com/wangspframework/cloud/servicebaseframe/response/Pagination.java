@@ -1,4 +1,4 @@
-package com.wangspframework.cloud.servicecommon.response;
+package com.wangspframework.cloud.servicebaseframe.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

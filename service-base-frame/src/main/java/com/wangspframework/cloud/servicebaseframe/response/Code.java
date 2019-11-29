@@ -1,6 +1,4 @@
-package com.wangspframework.cloud.servicecommon.response;
-
-import lombok.Data;
+package com.wangspframework.cloud.servicebaseframe.response;
 
 /**
  * @author spwang Created on 2019/11/29 at 10:54

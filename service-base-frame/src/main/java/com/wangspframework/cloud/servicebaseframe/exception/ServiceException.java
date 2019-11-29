@@ -1,4 +1,4 @@
-package com.wangspframework.cloud.servicecommon.exception;
+package com.wangspframework.cloud.servicebaseframe.exception;
 
 import lombok.Data;
 
