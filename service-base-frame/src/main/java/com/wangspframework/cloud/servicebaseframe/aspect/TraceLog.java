@@ -13,7 +13,7 @@ import java.util.Arrays;
  * @author spwang Created on 2019/11/28 at 10:36
  * @version 1.0.0
  */
-@Aspect
+//@Aspect
 public class TraceLog {
     private static final Logger LOGGER = LoggerFactory.getLogger(TraceLog.class);
 
