@@ -13,12 +13,12 @@ public class ServiceException extends Exception {
     private String code;
 
     public ServiceException(ErrorCode code) {
-        super(String.format("[%s]%s", code.getCode(), code.getMessage()));
+        super(code.getMessage());
         this.code = code.getCode();
     }
 
     public ServiceException(ErrorCode code, Throwable cause) {
-        super(String.format("[%s]%s", code.getCode(), code.getMessage()), cause);
+        super(code.getMessage(), cause);
         this.code = code.getCode();
     }
 
@@ -27,7 +27,7 @@ public class ServiceException extends Exception {
     }
 
     public ServiceException(String code, String message, Throwable cause) {
-        super(String.format("[%s]%s", code, message), cause);
+        super(message, cause);
         this.code = code;
     }
 }
