@@ -22,15 +22,8 @@ public class UserController implements UserClient {
     private UserRepository userRepository;
 
     @Override
-    public Result<com.wangspframework.cloud.servicedbclient.entity.User> getUserById(Integer id) throws ServiceException {
-
-        com.wangspframework.cloud.servicedb.entity.User user = null;
-        try {
-            user = userRepository.getOne(id);
-            return Result.success(convert((user)));
-        } catch (Exception e) {
-            throw new ServiceException("02-0001", "数据库查询失败", e);
-        }
+    public Result<com.wangspframework.cloud.servicedbclient.entity.User> getUserById(Integer id) {
+        return Result.success(convert((userRepository.getOne(id))));
     }
 
     @Override
