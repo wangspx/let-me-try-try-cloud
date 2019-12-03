@@ -2,24 +2,28 @@ package com.wangspframework.cloud.servicebaseframe.exception;
 
 import com.wangspframework.cloud.servicebaseframe.response.Code;
 import com.wangspframework.cloud.servicebaseframe.response.Result;
-import org.bouncycastle.asn1.ocsp.ResponseData;
 import org.springframework.boot.web.servlet.error.ErrorController;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.NoHandlerFoundException;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author spwang Created on 2019/12/2 at 11:52
  * @version 1.0.0
  */
-@RestControllerAdvice
-public class NotFoundExceptionHandler {
+@RestController
+public class NotFoundExceptionHandler implements ErrorController{
 
-    @ExceptionHandler(value = NoHandlerFoundException.class)
-    public Result notFoundHandler(NoHandlerFoundException e) throws Exception {
+    @Override
+    public String getErrorPath() {
+        return "/error";
+    }
+
+    @RequestMapping("/error")
+    public Result handleError(HttpServletRequest request){
         return Result.failure(Code.CODE_404);
     }
 }
