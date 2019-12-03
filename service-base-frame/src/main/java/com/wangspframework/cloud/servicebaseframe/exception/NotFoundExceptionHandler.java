@@ -3,10 +3,8 @@ package com.wangspframework.cloud.servicebaseframe.exception;
 import com.wangspframework.cloud.servicebaseframe.response.Code;
 import com.wangspframework.cloud.servicebaseframe.response.Result;
 import org.springframework.boot.web.servlet.error.ErrorController;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.servlet.NoHandlerFoundException;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -23,7 +21,7 @@ public class NotFoundExceptionHandler implements ErrorController{
     }
 
     @RequestMapping("/error")
-    public Result handleError(HttpServletRequest request){
+    public Result notFoundHandler(HttpServletRequest request){
         return Result.failure(Code.CODE_404);
     }
 }
