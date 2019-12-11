@@ -21,7 +21,7 @@ public class BaseResult<T> implements Serializable {
     /** 响应时间戳 */
     private LocalDateTime timestamp;
 
-    public BaseResult(Integer code, String message, T data, LocalDateTime timestamp) {
+    BaseResult(Integer code, String message, T data, LocalDateTime timestamp) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -32,44 +32,39 @@ public class BaseResult<T> implements Serializable {
         return code;
     }
 
-    public BaseResult setCode(Integer code) {
+    public void setCode(Integer code) {
         this.code = code;
-        return this;
     }
 
     public String getMessage() {
         return message;
     }
 
-    public BaseResult setMessage(String message) {
+    public void setMessage(String message) {
         this.message = message;
-        return this;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public BaseResult setData(T data) {
+    public void setData(T data) {
         this.data = data;
-        return this;
     }
 
     public Pagination getPagination() {
         return pagination;
     }
 
-    public BaseResult setPagination(Pagination pagination) {
+    public void setPagination(Pagination pagination) {
         this.pagination = pagination;
-        return this;
     }
 
     public LocalDateTime getTimestamp() {
         return timestamp;
     }
 
-    public BaseResult setTimestamp(LocalDateTime timestamp) {
+    public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
-        return this;
     }
 }

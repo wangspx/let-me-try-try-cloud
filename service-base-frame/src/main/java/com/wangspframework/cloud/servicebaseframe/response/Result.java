@@ -1,6 +1,7 @@
 package com.wangspframework.cloud.servicebaseframe.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import lombok.Builder;
 
 import java.time.LocalDateTime;
 
@@ -8,25 +9,26 @@ import java.time.LocalDateTime;
  * @author spwang Created on 2019/11/29 at 10:22
  * @version 1.0.0
  */
+@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Result<T> extends BaseResult<T> {
     public Result() {
         super(null, null, null, null);
     }
 
-    public Result(Code code, T data) {
+    private Result(Code code, T data) {
         this(code.getCode(), code.getMessage(), data);
     }
 
-    public Result(Integer code, String message, T data) {
+    private Result(Integer code, String message, T data) {
         super(code, message, data, LocalDateTime.now());
     }
 
-    public static  Result success() {
+    public static Result success() {
         return new Result<>(Code.CODE_200, null);
     }
 
-    public static  Result success(Object data) {
+    public static Result success(Object data) {
         return new Result<>(Code.CODE_200, data);
     }
 
