@@ -1,7 +1,6 @@
 package com.wangspframework.cloud.servicedb.controller;
 
-import com.wangspframework.cloud.servicebaseframe.exception.ServiceException;
-import com.wangspframework.cloud.servicebaseframe.response.Result;
+import com.wangspframework.cloud.servicebaseframe.response.Response;
 import com.wangspframework.cloud.servicedb.repository.UserRepository;
 import com.wangspframework.cloud.servicedbclient.client.UserClient;
 import com.wangspframework.cloud.servicedbclient.entity.User;
@@ -22,14 +21,14 @@ public class UserController implements UserClient {
     private UserRepository userRepository;
 
     @Override
-    public Result<com.wangspframework.cloud.servicedbclient.entity.User> getUserById(Integer id) {
-        return Result.success(convert((userRepository.getOne(id))));
+    public Response<User> getUserById(Integer id) {
+        return Response.success(convert((userRepository.getOne(id))));
     }
 
     @Override
-    public Result<com.wangspframework.cloud.servicedbclient.entity.User> addUser(User user) {
+    public Response<com.wangspframework.cloud.servicedbclient.entity.User> addUser(User user) {
         log.info("add user");
-        return Result.success(convert(userRepository.save(convert((user)))));
+        return Response.success(convert(userRepository.save(convert((user)))));
     }
 
     private com.wangspframework.cloud.servicedbclient.entity.User convert(com.wangspframework.cloud.servicedb.entity.User user) {

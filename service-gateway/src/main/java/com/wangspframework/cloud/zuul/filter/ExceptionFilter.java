@@ -5,7 +5,7 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 import com.wangspframework.cloud.servicebaseframe.response.Code;
-import com.wangspframework.cloud.servicebaseframe.response.Result;
+import com.wangspframework.cloud.servicebaseframe.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
@@ -46,7 +46,7 @@ public class ExceptionFilter extends ZuulFilter {
         HttpServletResponse response = ctx.getResponse();
         try {
             PrintWriter writer = response.getWriter();
-            writer.write(JSON.toJSONString(Result.failure(Code.CODE_500)));
+            writer.write(JSON.toJSONString(Response.failure()));
             writer.flush();
         } catch (IOException ex) {
             ex.printStackTrace();

@@ -1,7 +1,7 @@
 package com.wangspframework.cloud.servicebaseframe.exception;
 
 import com.wangspframework.cloud.servicebaseframe.response.Code;
-import com.wangspframework.cloud.servicebaseframe.response.Result;
+import com.wangspframework.cloud.servicebaseframe.response.Response;
 import com.wangspframework.cloud.servicebaseframe.utils.RequestMappingList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorController;
@@ -29,7 +29,7 @@ public class NotFoundExceptionHandler implements ErrorController{
     }
 
     @RequestMapping("/error")
-    public Result notFoundHandler(HttpServletRequest request){
+    public Response notFoundHandler(HttpServletRequest request){
         System.out.println(request.getAttribute("name"));
         List<String> superPath = requestMappingList.findSuperPath(request.getRequestURI());
 
@@ -41,7 +41,11 @@ public class NotFoundExceptionHandler implements ErrorController{
             superPath = requestMappingList.findSuperPath(request.getContextPath());
         }
 
-        Result failure = Result.failure(Code.CODE_404);
+        Response failure = Response.builder()
+                .status(Code.CODE_404.getCode())
+                .message(Code.CODE_404.getMessage())
+                .build();
+
         if (superPath != null) {
             failure.setData(superPath);
         }
