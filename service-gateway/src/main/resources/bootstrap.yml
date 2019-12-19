@@ -1,9 +1,3 @@
 spring:
   application:
     name: service-gateway
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: ENVIRONMENT-CONFIGURATION-CENTER
-      profile: dev

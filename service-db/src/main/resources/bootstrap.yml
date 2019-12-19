@@ -1,12 +1,3 @@
 spring:
   application:
     name: service-db
-  cloud:
-    config:
-      discovery:
-        enabled: true
-        service-id: ENVIRONMENT-CONFIGURATION-CENTER
-      profile: dev
-logging:
-  level:
-    org.springframework.cloud.openfeign: debug
