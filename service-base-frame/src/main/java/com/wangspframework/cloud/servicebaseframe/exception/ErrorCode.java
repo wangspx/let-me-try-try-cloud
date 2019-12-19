@@ -5,8 +5,17 @@ package com.wangspframework.cloud.servicebaseframe.exception;
  * @version 1.0.0
  */
 public enum ErrorCode {
-    E01_0001("01-01-0001","未知错误");
+    /**
+     * { code: "01-01-0001", message: "未知错误" }
+     */
+    E01_0001("01-01-0001", "未知错误");
+    /**
+     * 系统异常状态码
+     */
     private String code;
+    /**
+     * 系统异常信息
+     */
     private String message;
 
     ErrorCode(String code, String message) {

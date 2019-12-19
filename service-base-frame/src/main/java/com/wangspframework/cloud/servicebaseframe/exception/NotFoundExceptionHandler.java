@@ -23,14 +23,11 @@ public class NotFoundExceptionHandler implements ErrorController{
 
     @Override
     public String getErrorPath() {
-//        HttpServletRequest request = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
-//        request.setAttribute("name", request.getRequestURI());
-        return "/error11";
+        return "/error";
     }
 
     @RequestMapping("/error")
     public Response notFoundHandler(HttpServletRequest request){
-        System.out.println(request.getAttribute("name"));
         List<String> superPath = requestMappingList.findSuperPath(request.getRequestURI());
 
         if (superPath == null) {
@@ -41,15 +38,10 @@ public class NotFoundExceptionHandler implements ErrorController{
             superPath = requestMappingList.findSuperPath(request.getContextPath());
         }
 
-        Response failure = Response.builder()
+        return Response.builder()
                 .status(Code.CODE_404.getCode())
                 .message(Code.CODE_404.getMessage())
+                .data(superPath)
                 .build();
-
-        if (superPath != null) {
-            failure.setData(superPath);
-        }
-
-        return failure;
     }
 }
