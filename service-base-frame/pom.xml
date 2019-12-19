@@ -10,7 +10,7 @@
     <artifactId>service-base-frame</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>service-commons</name>
-    <description>微服务通用类</description>
+    <description>微服务基础框架</description>
 
     <properties>
         <java.version>1.8</java.version>
