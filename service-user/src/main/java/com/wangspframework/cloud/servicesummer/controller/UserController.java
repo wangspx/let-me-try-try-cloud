@@ -19,7 +19,8 @@ public class UserController implements Version1Controller{
     @Autowired
     private UserClient userClient;
 
-    @GetMapping("{id}")    public Response getUser(@PathVariable Integer id) throws ServiceException {
+    @GetMapping("{id}")
+    public Response getUser(@PathVariable Integer id) throws ServiceException {
         log.info("find the user for id = {}" , id);
         new Thread(()->{
             log.info("I am a other thread, userId = " + id);

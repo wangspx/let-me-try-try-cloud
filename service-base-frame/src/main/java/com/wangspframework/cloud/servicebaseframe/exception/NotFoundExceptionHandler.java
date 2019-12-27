@@ -41,7 +41,7 @@ public class NotFoundExceptionHandler implements ErrorController{
         return Response.builder()
                 .status(Code.CODE_404.getCode())
                 .message(Code.CODE_404.getMessage())
-                .data(superPath)
+//                .data(superPath)
                 .build();
     }
 }
