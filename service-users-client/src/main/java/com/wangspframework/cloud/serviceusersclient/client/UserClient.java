@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
  * @author spwang Created on 2020/2/25 at 17:29
  * @version 1.0.0
  */
+@RestController
 @FeignClient("SERVICE-DB")
 public interface UserClient {
     /**
