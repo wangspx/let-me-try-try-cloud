@@ -4,7 +4,6 @@ import com.alibaba.fastjson.JSON;
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
-import com.wangspframework.cloud.servicebaseframe.response.Code;
 import com.wangspframework.cloud.servicebaseframe.response.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
