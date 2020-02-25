@@ -14,10 +14,10 @@
     <version>1.0.0-SNAPSHOT</version>
 
     <modules>
+        <module>base-dependencies</module>
+        <module>base-frame</module>
         <module>environment-configuration-center</module>
         <module>environment-registration-center</module>
-        <module>starter-base-service</module>
-        <module>service-base-frame</module>
         <module>service-gateway</module>
     </modules>
 

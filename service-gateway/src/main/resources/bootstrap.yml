@@ -3,7 +3,8 @@ spring:
     name: service-gateway
   cloud:
     config:
-      discovery:
-        enabled: true
-        service-id: ENVIRONMENT-CONFIGURATION-CENTER
+      uri: http://47.107.120.53:8974
+#      discovery:
+#        enabled: true
+#        service-id: ENVIRONMENT-CONFIGURATION-CENTER
       profile: dev

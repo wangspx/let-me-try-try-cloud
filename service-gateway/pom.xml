@@ -19,7 +19,7 @@
     <dependencies>
         <dependency>
             <groupId>com.wangspframework.cloud</groupId>
-            <artifactId>service-base-frame</artifactId>
+            <artifactId>base-frame</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
 

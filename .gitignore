@@ -35,10 +35,10 @@ environment-configuration-center/mvnw.cmd
 environment-registration-center/.mvn/
 environment-registration-center/mvnw
 environment-registration-center/mvnw.cmd
-service-base-frame/.mvn/
-service-base-frame/mvnw
-service-base-frame/mvnw.cmd
-service-base-frame/src/test/java/com/wangsp/
+base-frame/.mvn/
+base-frame/mvnw
+base-frame/mvnw.cmd
+base-frame/src/test/java/com/wangsp/
 service-db-client/.mvn/
 service-db-client/mvnw
 service-db-client/mvnw.cmd
@@ -57,6 +57,6 @@ service-user/mvnw.cmd
 service-user/src/main/resources/static/
 service-user/src/main/resources/templates/
 service-user/src/test/java/com/wangsp/
-starter-base-service/.mvn/
-starter-base-service/mvnw
-starter-base-service/mvnw.cmd
+base-dependencies/.mvn/
+base-dependencies/mvnw
+base-dependencies/mvnw.cmd

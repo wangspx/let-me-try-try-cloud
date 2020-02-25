@@ -1,4 +1,9 @@
 spring:
+  zipkin:
+    base-url: http://47.107.120.53:9411
+  sleuth:
+    sampler:
+      percentage: 1.0
   cloud:
     config:
       discovery:

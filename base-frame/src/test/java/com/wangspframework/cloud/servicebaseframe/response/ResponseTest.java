@@ -2,7 +2,6 @@ package com.wangspframework.cloud.servicebaseframe.response;
 
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;
-import org.springframework.http.ResponseEntity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
