@@ -1,6 +1,5 @@
 package com.wangspframework.cloud.serviceusersclient.client;
 
-import com.wangspframework.cloud.servicebaseframe.exception.ServiceException;
 import com.wangspframework.cloud.servicebaseframe.response.Response;
 import com.wangspframework.cloud.serviceusersclient.entity.User;
 import com.wangspframework.cloud.serviceusersclient.exception.ServiceUserException;
