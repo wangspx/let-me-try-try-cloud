@@ -6,9 +6,10 @@ spring:
       percentage: 1.0
   cloud:
     config:
-      discovery:
-        enabled: true
-        service-id: ENVIRONMENT-CONFIGURATION-CENTER
+      uri: http://47.107.120.53:8974
+      #      discovery:
+      #        enabled: true
+      #        service-id: ENVIRONMENT-CONFIGURATION-CENTER
       profile: dev
 eureka:
   client:

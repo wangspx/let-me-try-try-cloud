@@ -19,6 +19,8 @@
         <module>environment-configuration-center</module>
         <module>environment-registration-center</module>
         <module>service-gateway</module>
+        <module>service-users</module>
+        <module>service-users-client</module>
     </modules>
 
     <properties>
