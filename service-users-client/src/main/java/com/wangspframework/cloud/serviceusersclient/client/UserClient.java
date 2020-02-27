@@ -34,6 +34,16 @@ public interface UserClient {
     Response<User> addUser(@RequestBody User user) throws ServiceUserException;
 
     /**
+     * 更新用户信息
+     *
+     * @param user 用户信息
+     * @return 成功更新的用户信息
+     * @throws ServiceUserException 用户接口异常类
+     */
+    @PutMapping("/users/")
+    Response<User> updateUser(@RequestBody User user) throws ServiceUserException;
+
+    /**
      * 删除用户
      *
      * @param id 用户id
